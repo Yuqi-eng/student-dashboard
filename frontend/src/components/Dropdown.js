@@ -14,7 +14,7 @@ function Dropdown ({handleSelect}) {
     if (courses.length > 0){
         //console.log(courses)
         const currentCourses = courses.filter(course => !course.access_restricted_by_date)
-        //console.log(currentCourses)
+        console.log(currentCourses)
         const options = currentCourses.map(course => <option key={course.id} value={course.id}>{course.name}</option>)
         const firstID = currentCourses[0].id
         handleSelect(firstID)
